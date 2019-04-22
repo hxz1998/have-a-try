@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="426.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.SolarCellController">
+   <children>
+      <Accordion layoutX="14.0" layoutY="12.0" prefHeight="426.0" prefWidth="623.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <panes>
+          <TitledPane animated="false" text="表一">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="50.0" text="U(V)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0" />
+                        <TextField fx:id="uText1" layoutX="60.0" layoutY="46.0" promptText="只能用一个空格隔开数据" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="30.0" />
+                        <Label layoutX="569.0" layoutY="40.0" text="Label" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
+                        <Label layoutX="17.0" layoutY="85.0" text="I(mA)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="80.0" />
+                        <TextField fx:id="iText1" layoutX="70.0" layoutY="81.0" promptText="只能用一个空格隔开数据" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="80.0" />
+                        <Label layoutX="574.0" layoutY="90.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0" />
+                        <Label alignment="CENTER" layoutX="250.0" layoutY="198.0" text="-数据中间用空格隔开-" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" />
+                        <HBox layoutX="486.0" layoutY="319.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <Button layoutX="486.0" layoutY="319.0" mnemonicParsing="false" text="清除数据" visible="false">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="analyzeButton1" layoutX="550.0" layoutY="319.0" mnemonicParsing="false" onAction="#calcForOne_solarCell" text="分析">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label fx:id="topic1" alignment="CENTER" layoutX="295.0" layoutY="246.0" text="Label" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="表二">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="37.0" text="θ(LUX)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0" />
+                        <Label layoutX="14.0" layoutY="80.0" text="Uoc(V)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="14.0" layoutY="127.0" text="Isc(mA)" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="110.0" />
+                        <TextField fx:id="LUX" layoutX="58.0" layoutY="33.0" promptText="只能用用一个空格隔开数据" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" />
+                        <TextField fx:id="Uoc" layoutX="58.0" layoutY="76.0" promptText="只能用用一个空格隔开数据" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0" />
+                        <TextField fx:id="Isc" layoutX="58.0" layoutY="123.0" promptText="只能用用一个空格隔开数据" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="110.0" />
+                        <Button fx:id="analyzeButton2" layoutX="495.0" layoutY="275.0" mnemonicParsing="false" onAction="#calcForTwo_solarCell" text="分析" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></Button>
+                        <Label alignment="CENTER" layoutX="295.0" layoutY="201.0" text="-数据中间用空格隔开-" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" />
+                        <Label fx:id="topic2" alignment="CENTER" layoutX="295.0" layoutY="246.0" text="Label" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" />
+                     </children></AnchorPane>
+              </content>
+            </TitledPane>
+          <TitledPane animated="false" text="表三">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="LUX2" layoutX="71.0" layoutY="18.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="16.0" />
+                        <Label layoutX="14.0" layoutY="22.0" text="光照强度" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                        <Label layoutX="244.0" layoutY="22.0" text="LUX" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="20.0" />
+                        <TextField fx:id="RText" layoutX="80.0" layoutY="72.0" promptText="如果是无穷请输入 -1" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <TextField fx:id="UText" layoutX="80.0" layoutY="119.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <TextField fx:id="IText" layoutX="80.0" layoutY="163.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <TextField fx:id="PText" editable="false" layoutX="80.0" layoutY="212.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <Label layoutX="28.0" layoutY="76.0" text="R(Ω)" />
+                        <Label layoutX="28.0" layoutY="123.0" text="U(V)" />
+                        <Label layoutX="28.0" layoutY="167.0" text="I(mA)" />
+                        <Label layoutX="26.0" layoutY="216.0" text="P(w)" />
+                        <Label alignment="CENTER" layoutX="251.0" layoutY="262.0" text="-数据中间用空格隔开-" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" />
+                        <Label alignment="CENTER" layoutX="295.0" layoutY="288.0" text="Label" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" />
+                        <Button fx:id="analyzeButton3" layoutX="551.0" layoutY="287.0" mnemonicParsing="false" onAction="#calcForThree_solarCell" text="分析" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Button>
+                        <Label layoutX="23.0" layoutY="254.0" text="P(w)-MAX" AnchorPane.leftAnchor="5.0" />
+                        <TextField fx:id="PMax" editable="false" layoutX="89.6" layoutY="250.0" prefHeight="20.0" prefWidth="39.0" AnchorPane.leftAnchor="70.0" />
+                        <TextField fx:id="IMax" editable="false" layoutX="240.0" layoutY="250.0" prefHeight="20.0" prefWidth="39.0" />
+                        <Label layoutX="125.0" layoutY="254.0" text="最佳工作电流 I(mA)" />
+                        <Label layoutX="291.0" layoutY="254.0" text="最佳工作电压 U(V)" />
+                        <TextField fx:id="UMax" editable="false" layoutX="396.0" layoutY="250.0" prefHeight="20.0" prefWidth="39.0" />
+                        <Label layoutX="446.0" layoutY="254.0" text="填充因子 FF" />
+                        <TextField fx:id="FF" editable="false" layoutX="521.0" layoutY="250.0" prefHeight="20.0" prefWidth="39.0" />
+                     </children>
+                  </AnchorPane>
+               </content></TitledPane>
+        </panes>
+      </Accordion>
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="403.0" prefWidth="200.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Separator layoutX="21.0" layoutY="395.0" prefWidth="200.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

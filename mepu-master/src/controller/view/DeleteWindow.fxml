@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="365.0" prefWidth="295.0" styleClass="deletePane" stylesheets="@MePu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.DeleteController">
+   <effect>
+      <Blend />
+   </effect>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="删除" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="deleteItem" layoutX="102.0" layoutY="83.0" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+         <tooltip>
+            <Tooltip opacity="0.8" text="删除之后不可恢复">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </ChoiceBox>
+      <Label layoutX="31.0" layoutY="67.0" text="Step1 . 请选择一个条目" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="31.0" layoutY="149.0" text="Step2 . 请按确定删除">
+         <textFill>
+            <RadialGradient centerX="0.4944444444444444" centerY="0.7761904761904762" radius="0.5">
+               <stops>
+                  <Stop color="#807a7a" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Separator layoutY="220.0" prefHeight="1.0" prefWidth="306.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ProgressIndicator fx:id="progress" layoutX="196.0" layoutY="261.0" progress="0.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="150.0" />
+      <HBox layoutX="241.0" layoutY="261.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button fx:id="refresh" layoutX="241.0" layoutY="261.0" mnemonicParsing="false" onAction="#getItemsFromDatabase" text="刷新">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip opacity="0.8" text="操作失败请按刷新重试">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="okButton" layoutX="297.0" layoutY="261.0" mnemonicParsing="false" onAction="#deleteItemFromDatabase" text="确定">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

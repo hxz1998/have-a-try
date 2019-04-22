@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="992.0" styleClass="root" stylesheets="@MePu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.MainController">
+   <children>
+      <SplitPane fx:id="pane" dividerPositions="0.2754285714285714" layoutX="85.0" layoutY="86.0" prefHeight="350.0" prefWidth="488.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <TitledPane fx:id="chatWindow" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="366.0" prefWidth="238.0" styleClass="deletePane" stylesheets="@MePu.css" text="交互">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <content>
+                  <SplitPane dividerPositions="0.8844765342960289" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" snapToPixel="false">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="robotMessage" editable="false" layoutX="-15.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" promptText="或许这里可以回答..." styleClass="deletePane" stylesheets="@MePu.css" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextField fx:id="userMessage" layoutX="14.0" layoutY="26.0" onAction="#chatWithRobot" promptText="您想知道..." AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </TitledPane>
+          <AnchorPane fx:id="messageWindow" minHeight="0.0" minWidth="0.0" prefHeight="366.0" prefWidth="362.0" styleClass="deletePane" stylesheets="@MePu.css">
+               <children>
+                  <SplitPane dividerPositions="0.203125, 0.7951388888888888" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="446.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="444.0" styleClass="deletePane" stylesheets="@MePu.css">
+                           <children>
+                              <Separator layoutY="46.0" prefHeight="4.0" prefWidth="444.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                              <Label alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="15.0" prefWidth="472.0" text="消息" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="57.0" text="标题" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                              <TextField fx:id="title" layoutX="54.0" layoutY="53.0" promptText="输入消息的标题..." stylesheets="@MePu.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="deletePane" stylesheets="@MePu.css">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="内容" visible="false" />
+                              <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="29.0" prefHeight="220.0" prefWidth="589.0" styleClass="deletePane" stylesheets="@MePu.css" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <TextField fx:id="overview" layoutX="50.0" layoutY="307.0" prefHeight="35.0" prefWidth="549.0" promptText="消息概述..." stylesheets="@MePu.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <Label layoutX="11.0" layoutY="309.0" text="概述" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" />
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="deletePane" stylesheets="@MePu.css">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="链接" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0" />
+                              <TextField fx:id="link" layoutX="10.0" layoutY="33.0" promptText="输入链接..." stylesheets="@MePu.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <Separator layoutY="44.0" prefWidth="200.0" styleClass="deletePane" stylesheets="@MePu.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <HBox layoutX="349.0" layoutY="82.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <children>
+                                    <Button layoutX="349.0" layoutY="82.0" mnemonicParsing="false" text="预览" visible="false">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="clear" layoutX="411.0" layoutY="82.0" mnemonicParsing="false" onAction="#clearMessage" text="清空">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="send" layoutX="476.0" layoutY="82.0" mnemonicParsing="false" onAction="#sendMessageToUser" text="发送">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ProgressIndicator fx:id="progress" layoutX="352.0" layoutY="72.0" progress="0.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="260.0" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

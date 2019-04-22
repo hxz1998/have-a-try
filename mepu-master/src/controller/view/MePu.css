@@ -1,0 +1,12 @@
+.root {
+     -fx-background-image: url("image/metalbg.jpg");
+}
+.deletePane{
+	-fx-background-image: url("image/metalbg.jpg");
+}
+.editPane{
+	-fx-background-image: url("image/editAddDelete.jpg");
+}
+.addPane{
+	-fx-background-image: url("image/editAddDelete.jpg");
+}

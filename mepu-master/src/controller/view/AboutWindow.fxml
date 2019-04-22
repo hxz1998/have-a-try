@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="436.0" styleClass="deletePane" stylesheets="@MePu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.AboutController">
+   <children>
+      <Separator layoutX="-10.0" layoutY="199.0" prefHeight="0.0" prefWidth="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0" />
+      <ImageView fitHeight="658.0" fitWidth="566.0" layoutY="1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/start_img.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="118.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+      <Accordion layoutX="14.0" layoutY="241.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="240.0">
+        <panes>
+          <TitledPane animated="false" onMouseClicked="#setCont" text="关于我们">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="deletePane" stylesheets="@MePu.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" />
+                        <ImageView fitHeight="352.0" fitWidth="598.0" layoutX="-5.4" layoutY="-11.4" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-39.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-21.0">
+                           <image>
+                              <Image url="@image/backgroundimage.png" />
+                           </image>
+                        </ImageView>
+                        <VBox layoutX="9.0" layoutY="14.0" spacing="20.0" AnchorPane.leftAnchor="15.0">
+                           <children>
+                              <Label fx:id="first" layoutX="14.0" layoutY="14.0" text="嗯..." />
+                              <Label fx:id="second" layoutX="9.0" layoutY="40.0" text="我们是矿大信控学生..." />
+                              <Label fx:id="third" layoutX="9.0" layoutY="70.0" text="没错，是这样的..." />
+                              <Label fx:id="forth" layoutX="9.0" layoutY="94.0" text="下面是我们的邮箱，如果您和我们一样有兴趣" />
+                              <Label fx:id="fifth" layoutX="14.0" layoutY="120.0" text="做一些奇奇怪怪的玩具.." />
+                              <Label fx:id="sixth" layoutX="20.0" layoutY="139.0" text="非常希望和您交朋友" />
+                              <Label fx:id="seventh" layoutX="9.0" layoutY="157.0" text="~ . ~" />
+                              <Hyperlink fx:id="eighth" layoutX="14.0" layoutY="182.0" onAction="#sendEmailToMe" text="我的邮箱" textFill="#080808" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="关于软件">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="deletePane" stylesheets="@MePu.css">
+                     <children>
+                        <Accordion layoutX="23.0" layoutY="34.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <panes>
+                            <TitledPane animated="false" text="Version1.0.0">
+                              <content>
+                                    <ScrollPane prefViewportHeight="114.5999984741211" prefViewportWidth="337.0">
+                                       <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox layoutX="14.0" layoutY="14.0" spacing="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="1.基本的推送功能" />
+                                                      <Label layoutX="14.0" layoutY="29.0" text="2.在线讨论功能" />
+                                                      <Label layoutX="24.0" layoutY="39.0" text="3.智能查询功能" />
+                                                      <Label layoutX="34.0" layoutY="49.0" text="4.后台网页管理" />
+                                                      <Label layoutX="44.0" layoutY="59.0" text="5.人机交互功能" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Version1.0.1">
+                              <content>
+                                    <ScrollPane prefViewportHeight="109.5999984741211" prefViewportWidth="337.0">
+                                       <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="14.0" text="新增" AnchorPane.leftAnchor="10.0" />
+                                                <VBox layoutX="35.0" layoutY="29.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="29.0">
+                                                   <children>
+                                                      <Label layoutX="34.0" layoutY="34.0" text="2.支持接收消息推送结果" AnchorPane.topAnchor="34.0" />
+                                                      <Label layoutX="24.0" layoutY="24.0" text="1.支持推送消息链接" AnchorPane.topAnchor="34.0" />
+                                                   </children>
+                                                </VBox>
+                                                <Label layoutX="6.0" layoutY="42.0" text="优化" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="55.0" />
+                                                <VBox layoutX="35.0" layoutY="75.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="75.0">
+                                                   <children>
+                                                      <Label layoutX="16.0" layoutY="52.0" text="1.界面优化" />
+                                                      <Label layoutX="26.0" layoutY="62.0" text="2.更快接入服务器" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Version1.0.2">
+                              <content>
+                                    <ScrollPane pannable="true" prefViewportHeight="131.0" prefViewportWidth="337.0">
+                                       <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label text="去除" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="10.0" />
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0">
+                                                   <children>
+                                                      <Label text="推送结果反馈功能" />
+                                                      <Label text="在线讨论功能" />
+                                                   </children>
+                                                </VBox>
+                                                <Label layoutX="20.0" layoutY="81.0" text="优化" AnchorPane.leftAnchor="10.0" />
+                                                <Label layoutX="12.0" layoutY="14.0" text="新增" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                                <VBox layoutX="44.0" layoutY="35.0" AnchorPane.leftAnchor="40.0">
+                                                   <children>
+                                                      <Label layoutX="44.0" layoutY="35.0" text="接入SQL数据库" />
+                                                      <Label layoutX="44.0" layoutY="51.0" text="支持往期消息查询" />
+                                                      <Label layoutX="44.0" layoutY="66.0" text="支持数据导出到本地" />
+                                                   </children>
+                                                </VBox>
+                                                <Label layoutX="44.0" layoutY="96.0" text="优化界面" AnchorPane.leftAnchor="40.0" />
+                                                <Label layoutX="44.0" layoutY="109.0" text="优化数据同步速度" AnchorPane.leftAnchor="40.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" text="Version1.0.5">
+                                <content>
+                                    <ScrollPane prefViewportHeight="108.0" prefViewportWidth="337.0">
+                                       <content>
+                                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox layoutX="41.0" layoutY="21.0" spacing="3.0" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="30.0">
+                                                   <children>
+                                                      <Label layoutX="31.0" layoutY="32.0" text="1.支持富文本编辑" />
+                                                      <Label layoutX="41.0" layoutY="42.0" text="2.支持主题切换" />
+                                                      <Label layoutX="43.0" layoutY="50.0" text="3.支持用户界面定制" />
+                                                      <Label layoutX="53.0" layoutY="60.0" text="4.支持数据本地排序" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="41.0" layoutY="103.0" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="130.0">
+                                                   <children>
+                                                      <Label layoutX="33.0" layoutY="103.0" text="1.界面整体更加友好" />
+                                                      <Label layoutX="43.0" layoutY="113.0" text="2.用户验证更加方便" />
+                                                      <Label layoutX="41.0" layoutY="121.0" text="3.可扩展性极大增强" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="3.0" layoutY="-2.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="39.0">
+                                                   <children>
+                                                      <Label layoutX="33.0" layoutY="151.0" text="1.去除往期内容再编辑功能" />
+                                                      <Label layoutX="43.0" layoutY="161.0" text="2.去除直接添加消息功能" />
+                                                   </children>
+                                                </VBox>
+                                                <Label layoutX="-1.0" layoutY="12.0" text="新增" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                                <Label layoutX="9.0" layoutY="107.0" text="优化" />
+                                                <Label layoutX="14.0" layoutY="192.0" text="去除" AnchorPane.bottomAnchor="65.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="更好建议">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="deletePane" stylesheets="@MePu.css">
+                     <children>
+                        <ImageView fitHeight="277.0" fitWidth="408.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="38.0" layoutY="43.0" text="阿偶，这里还未建设..." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="图片来源">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="deletePane" stylesheets="@MePu.css">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="14.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="纸飞机图片来自Iconfont" />
+                              <Label layoutX="14.0" layoutY="53.0" text="背景图片来自网络" />
+                              <Label layoutX="14.0" layoutY="96.0" text="大海图片来自 Mink Mingle" />
+                              <Label layoutX="14.0" layoutY="131.0" text="其他图片均来自生成工具" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <ImageView fx:id="closeWindow" fitHeight="30.0" fitWidth="30.0" layoutX="226.0" layoutY="1.0" onMouseClicked="#closeAboutWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@image/icon/关闭所有窗口.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

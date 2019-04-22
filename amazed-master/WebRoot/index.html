@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>成绩查询系统</title>
+    <script src="http://localhost:8080/amazed/js/mui.min.js"></script>
+    <link href="http://localhost:8080/amazed/css/mui.min.css" rel="stylesheet"/>
+    <link href="http://localhost:8080/amazed/css/frontStyle.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">成绩查询系统</h1>
+	</header>
+	
+	<div class="mui-content">
+	    <form class="mui-input-group" action="http://localhost:8080/amazed/user/query!execute" method="post">
+	        <div class="mui-input-row">
+	            <label>用户名：</label>
+	            <input type="text" class="mui-input-clear" placeholder="您的姓名，汉字输入" name="user.username">
+	        </div>
+	        <div class="mui-input-row">
+                <label>密码：</label>
+	            <input type="password" class="mui-input-clear" placeholder="您的身份证号" name="user.password">
+	        </div>
+	        <br />
+	        <br />
+	        <br />
+	        <button type="submit" class="mui-btn mui-btn-blue mui-btn-block">提交</button>
+	        <br />
+	        <hr />
+	    </form>
+	</div>
+	
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active">
+	        <span class="mui-tab-label">&copy; 2018 Mr.Hu</span>
+	    </a>
+	</nav>
+</body>
+</html>

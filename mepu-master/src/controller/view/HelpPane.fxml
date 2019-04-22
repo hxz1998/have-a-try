@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="557.0" prefWidth="483.0" styleClass="deletePane" stylesheets="@MePu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.HelpController">
+   <children>
+      <BorderPane layoutX="41.0" layoutY="125.0" prefHeight="489.0" prefWidth="483.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="42.0" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="minWindow" fitHeight="30.0" fitWidth="30.0" layoutX="42.0" layoutY="8.0" onDragDetected="#minWindow" onMouseClicked="#minWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/icon/最小化forMain.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="closeWindow" fitHeight="30.0" fitWidth="30.0" layoutX="242.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/icon/关闭所有窗口.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="-79.0" layoutY="-50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@image/icon/paper-airplane.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="519.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@image/icon/帮助.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="176.0" layoutY="10.0" minWidth="1.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="176.0" AnchorPane.topAnchor="0.0" />
+                  <Separator layoutY="-6.0" prefHeight="13.0" prefWidth="483.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="14.0" layoutY="476.0" text="Copright ©2017 Mr.Hu" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="330.0" />
+                  <Hyperlink fx:id="myblog" layoutX="14.0" layoutY="315.0" onAction="#visitMyBlog" text="我的博客" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="myMail" layoutX="15.0" layoutY="253.0" onAction="#sendMailToMe" text="给我写信" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="-66.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="10.0">
+                     <image>
+                        <Image url="@image/icon/写信.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="10.0">
+                     <image>
+                        <Image url="@image/icon/博客.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="190.0" layoutY="14.0" text="您可能需要知道..." AnchorPane.leftAnchor="190.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="190.0" layoutY="43.0" text="这是一个并不成熟的软件，不过，" AnchorPane.leftAnchor="220.0" />
+                  <Label layoutX="190.0" layoutY="70.0" text="我们仍然在不断地完善中...感谢您的支持和理解" AnchorPane.leftAnchor="220.0" />
+                  <Label layoutX="190.0" layoutY="92.0" text="您可能会面临以下问题..." AnchorPane.leftAnchor="190.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="198.0" layoutY="131.0" text="无法导出数据库内容到本地：" AnchorPane.leftAnchor="220.0" />
+                  <VBox layoutX="240.0" layoutY="153.0" spacing="10.0">
+                     <children>
+                        <Label layoutX="211.0" layoutY="153.0" text="您可以尝试重新启动软件再尝试。" AnchorPane.leftAnchor="240.0" />
+                        <Label layoutX="211.0" layoutY="183.0" text="确保您的网络正常" AnchorPane.leftAnchor="240.0" />
+                        <Label layoutX="216.0" layoutY="210.0" text="确保您的账户仍然有效" AnchorPane.leftAnchor="240.0" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="190.0" layoutY="243.0" text="导出内容为乱码：" AnchorPane.leftAnchor="220.0" />
+                  <VBox layoutX="240.0" layoutY="268.0" spacing="10.0">
+                     <children>
+                        <Label layoutX="211.0" layoutY="268.0" text="尝试修改Excel编码为UTF-8编码，" AnchorPane.leftAnchor="240.0" />
+                        <Label layoutX="211.0" layoutY="288.0" text="我们的编码统一为UTF-8" AnchorPane.leftAnchor="240.0" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="190.0" layoutY="318.0" text="无法刷新数据库内容：" AnchorPane.leftAnchor="220.0" />
+                  <Label layoutX="214.0" layoutY="347.0" text="确保您网络正常情况之后联系最高管理员" AnchorPane.leftAnchor="240.0" />
+                  <Label layoutX="190.0" layoutY="372.0" text="无法删除对应信息：" AnchorPane.leftAnchor="220.0" />
+                  <Label layoutX="214.0" layoutY="397.0" text="请核对您的账户是否有删除的权限" AnchorPane.leftAnchor="240.0" />
+                  <Label layoutX="190.0" layoutY="436.0" text="多次尝试仍不成功：" AnchorPane.leftAnchor="190.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="190.0" layoutY="465.0" text="请在左边点击“给我写信”联系我。谢谢您的支持！" AnchorPane.leftAnchor="220.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

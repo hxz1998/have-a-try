@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.convention.default.parent.package" value="struts-default"/>
+    
+    <!-- 默认包名 -->
+    <package name="default" extends="struts-default">
+        <action name="userAction" class="com.mrhu.ssh.action.UserAction">
+            <result name="success">/regist_success.jsp</result>
+            <result name="error">/regist_error.jsp</result>
+            <result name="list">/user_list.jsp</result>
+            <result name="getUser">/user.jsp</result>
+            <allowed-methods>getUserList,getUserById</allowed-methods>
+        </action>
+    </package>
+    
+</struts>

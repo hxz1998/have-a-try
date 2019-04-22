@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="674.0" prefWidth="1144.0" styleClass="root" stylesheets="@MePu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.RootController">
+   <bottom>
+      <ProgressBar fx:id="progressIndicator" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="821.0" progress="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <AnchorPane maxHeight="60.0" onMouseDragged="#setRootStage" onMousePressed="#getMouseX" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="文件">
+                     <items>
+                        <MenuItem fx:id="printData" mnemonicParsing="false" onAction="#printDatabase" text="导出" />
+                        <MenuItem fx:id="exitAction" mnemonicParsing="false" onAction="#exitSystem" text="退出" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="编辑">
+                     <items>
+                        <MenuItem fx:id="deleteAction" mnemonicParsing="false" onAction="#showDeletePane" text="删除" />
+                        <MenuItem fx:id="editAction" mnemonicParsing="false" onAction="#showEditPane" text="修改" visible="false" />
+                        <MenuItem fx:id="addAction" mnemonicParsing="false" onAction="#showAddPane" text="增加" visible="false" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="视图">
+                     <items>
+                        <MenuItem fx:id="showDatabase" mnemonicParsing="false" onAction="#showDatabasePane" text="数据库视图" />
+                        <MenuItem fx:id="showMessage" mnemonicParsing="false" onAction="#showMessagePane" text="消息视图" />
+                        <SeparatorMenuItem mnemonicParsing="false" visible="false" />
+                        <CheckMenuItem fx:id="chatWindow" mnemonicParsing="false" onAction="#showOrCloseChatWindow" selected="true" text="交互窗口" visible="false" />
+                        <CheckMenuItem fx:id="messageWindow" mnemonicParsing="false" onAction="#showOrCloseMessageWindow" selected="true" text="消息窗口" visible="false" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="主题">
+                     <items>
+                        <RadioMenuItem fx:id="light" mnemonicParsing="false" onAction="#setLightTheme" selected="true" text="浅色">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="dark" mnemonicParsing="false" onAction="#setDartTheme" text="深色" toggleGroup="$group" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="关于">
+                     <items>
+                        <MenuItem fx:id="getHelp" mnemonicParsing="false" onAction="#showHelpPane" text="帮助" />
+                        <MenuItem fx:id="getAbout" mnemonicParsing="false" onAction="#showAboutWindow" text="关于我们" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <ImageView fx:id="close" fitHeight="30.0" fitWidth="30.0" layoutX="598.0" layoutY="-45.0" onMouseClicked="#closeWindow" onMouseEntered="#changeStyleInToClose" onMouseExited="#changeStyleOutClose" opacity="0.6" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+               <image>
+                  <Image url="@image/icon/关闭所有窗口.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="max" fitHeight="32.0" fitWidth="32.0" layoutX="979.0" layoutY="-57.0" onMouseClicked="#maxWindow" onMouseEntered="#changeStyleInToMax" onMouseExited="#changeStyleOutMax" opacity="0.6" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="3.0">
+               <image>
+                  <Image url="@image/icon/最大化.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="min" fitHeight="30.0" fitWidth="28.0" layoutX="930.0" layoutY="-56.0" onMouseClicked="#minWindow" onMouseEntered="#changeStyleInToMin" onMouseExited="#changeStyleOutMin" opacity="0.6" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@image/icon/最小化forMain.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="-17.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@image/icon/paper-airplane.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="12.0" text="方便您的生活" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="12.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
